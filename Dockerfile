@@ -1,5 +1,5 @@
 # 构建阶段
-FROM --platform=$BUILDPLATFORM rust:1.83.0-slim-bookworm as builder
+FROM --platform=linux/arm64 rust:1.83.0-slim-bookworm as builder
 WORKDIR /app
 
 # 安装构建依赖
