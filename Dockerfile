@@ -39,6 +39,9 @@ RUN apt-get update && \
 # 复制构建产物
 COPY --from=builder /app/cursor-api .
 
+# 创建空的 token.txt 文件
+RUN touch token.txt
+
 # 设置默认端口
 ENV PORT=3000
 
